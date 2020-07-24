@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* To remove default browser-enforced styles, we apply 
+  some default CSS values for every element in the page 
+  to level the playing field all at once. */
+}
+
+body {
+  /* more on this crazy alphanumerical value in a minute! */
+  color: #39a6b2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+header {
+  /* apply styles to <header>
+We just told the <header> element to apply 
+padding, which means to add space between 
+where the <header> starts and where the content 
+inside it starts. We also applied a background-color 
+of a light blue / teal.
+*/
+  padding: 20px 35px;
+  background-color: #39a6b2;
+  font-weight: bold;
+}
+
+header h1 {
+ font-weight: bold;
+ font-size: 36px;
+ color: #fce138;
+ margin: 0;
+ display: inline; /* So just by adding that one 
+ property declaration (display: inline;) and setting 
+ the <h1> to inline instead of block, we moved the <nav> 
+ on the righthand side up. */
+}
+
+header a {
+  text-decoration: none;
+  color: #fce138;
+}
+
+header nav {
+  /* float: Think of this as similar to the 
+  text-wrapping property in Microsoft Word, 
+  which takes elements that want to take up 100% 
+  of its parent's width by default (known in CSS 
+  as block elements) and pushes everything after 
+  it below it—even if it physically isn't 100% of 
+  its parents width—and allows other elements to 
+  come along side of it or wrap around it (known in 
+  CSS as inline elements). This property is used when 
+  we have HTML elements that would look better side by 
+  side, and we want to use our horizontal space in a more 
+  meaningful way. */
+  float: right;
+  margin: 7px 0;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 22px;
+}
