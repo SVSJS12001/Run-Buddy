@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Run Buddy</title>
+    <title>Project</title>
 
 </head>
 
@@ -12,12 +12,14 @@
     <header>
         <h1>RUN BUDDY</h1>
         <nav>
+
             <!-- Unordered list element -->
             <ul>
+
                 <!-- List item element-->
                 <li>
-                    <!-- Anchor element -->
-                    <a href="#what-we-do">What We Do</a>
+
+                    <!-- Anchor element --><a href="#what-we-do">What We Do</a>
                 </li>
                 <li>
                     <a href="#what-you-do">What You Do</a>
@@ -31,42 +33,126 @@
             </ul>
         </nav>
     </header>
+
     <!-- hero section -->
     <section>
-        <div></div>
+        <div>
+            <!--One important HTML rule is that both 
+            the opening and closing tags of an element must be 
+            completely contained inside the parent element. In 
+            this case the parent element is <section> and the 
+                child element is the <div>. -->
+            <h3>Get Started Today</h3>
+            <p>Fill out this form and the trainers will schedule a consultation</p>
+            <form>
+                <!-- A sign-up form is a call to action, or CTA. Within this 
+                <form> will be child elements such as <input> and <label>. <input> 
+                elements come in many flavors, such as open-ended (a text field
+                that lets the user enter freeform text) and closed-ended 
+                (a radio button or checkbox for the user to select or check).
+                We'll start by adding the following HTML to the <form> element.
+                        
+                Look closely at how we pair the <input> and
+                corresponding <label> elements and their attributes: -->
+                <label for="name">Enter full name:</label>
+                <!-- {for} is an attribute in the <label> that programmatically links to 
+                    the id attribute in the <input> element. The <label> text not only offers 
+                    a visual directive of what to enter but also programmatically links to the
+                    associated <input>. When a user with a visual impairment uses a screen reader, 
+                    the label will be read out when they focus on the input field. Labels also make 
+                    it easier to fill out forms on mobile devices; clicking on the label will target
+                     the focus to the associated input field, which can be hard to do manually
+                     on a small screen. -->
+                <input type="text" placeholder="Your Name" name="name" id="name" />
+                <!-- {type} relates to what kind of input element we are using. Here we want a text field,
+                     which is also the default value.  
+                     {Placeholder} offers a hint or label within the text field, but will not be submitted 
+                     if this field if left blank. 
+                     name identifies the element so the response can be referenced after the form is submitted. -->
+                <label for="email">Enter email address:</label>
+                <input type="email" placeholder="Email Addesss" name="email" id="email" />
+                <!--Desktop browsers treat the "tel" input type the same as the default "text" type. 
+                    They don't automatically validate the user's inputted value. However, 
+                    browsers on mobile devices will display a numeric keypad for the user 
+                    to input a value, rather than a standard keyboard. -->
+                <label for="phone number">Enter a telphone number:</label>
+                <input type="tel" placeholder="Phone Number" name="phone" id="phone" />
+                <!-- The simbol on the end of the <input> (/>), is known as a self-closing tag 
+                    and is a common sight in HTML. Some elements, like <input>, do not 
+                    contain any content or child elements, so the closing tag immediately 
+                    follows the opening tag. Thus this shortcut was created to self-close 
+                    the opening tag. -->
+                <p>
+                    Have you worked out with a trainer before?
+                    <input type="radio" name="trainer-confirm" id="triner-yes" />
+                    <label for="triner-yes">Yes</label>
+                    <!--This is used to reference which 
+                        radio button this label belongs to. The value for the {for} attribute 
+                        must match the value of the {id} attribute of the <input> element.-->
+                    <input type="radio" name="trainer-confirm" id="triner-no" />
+                    <label for="triner-no">No</label>
+                </p>
+                <!-- We've wrapped both of the answers, including both radio buttons, 
+                    in a <p> element that also includes the question. Because the radio 
+                    buttons are inline elements, the answer selections will render from 
+                    left to right on the same line as our question, just like it does in 
+                    the mock-up. Next, the <label> links the displayed values, Yes and No, 
+                    to their respective radio inputs. This link enhances accessibility by 
+                    allowing users to click on the label's text as well as the radio buttons, 
+                    which provides more clickable surface area. 
+                    The radio button elements must have the same name attribute in order to be 
+                    associated with the same radio group. This is how the browser identifies that 
+                    a group of choices can have an exclusive singular answer. In this case, 
+                    the value of our radio group in name is trainer-confirm. -->
+                <p>
+                    <label for="checkbox">
+                        I aknowlege that I am atleast 18 years of age.
+                    </label>
+                    <input type="checkbox" name="age-confirm" id="checkbox" />
+                </p>
+                <button type="submit">
+                    <!-- A button is an essential component of a user 
+                    interface and can have a variety of different functions and uses. 
+                    A button can link to another area on the webpage or an external site, 
+                    submit data to a server, or be programmed for any activity. n our case, 
+                    we need a submit type to perform the needed action. The content of this 
+                    element, "Get running", will be written inside the <button> element to 
+                    render a label on the button itself.-->
+                    Get Running!
+                </button>
+            </form>
+        </div>
     </section>
-
     <!-- "what we do" section -->
     <section>
         <h2>What We Do</h2>
     </section>
+
 
     <!-- "what you do" section -->
     <section>
         <h2>What You Do</h2>
     </section>
 
+
     <!-- "meet the trainers" section -->
     <section>
         <h2>Meet The Trainers</h2>
     </section>
+
 
     <!-- "reach out" section -->
     <section>
         <h2>Reach Out</h2>
     </section>
 </body>
-
 <!-- footer -->
 <footer>
-    <h2>❤️ Made with blood, sweat, and tears by &reg Me</h2>
+  <h2>❤️ Made with blood, sweat, and tears by <span class="&reg SVS">&reg SVS</span></h2>
     <div>
         <a href="#">Read Our Privacy Policy</a><br />
-        <!-- This (copy) is called an HTML entity --> 
-        &copy; 2019 Run Buddy, Inc.
+        &copy; 2019 Run Buddy, Inc. <!-- This (&copy), is called an HTML entity -->
     </div>
 </footer>
-
-
 
 </html>

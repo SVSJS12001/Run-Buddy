@@ -83,6 +83,11 @@ footer h2 {
   margin: 0;
 }
 
+.SVS:hover {
+  color: rgb(240, 6, 6);
+  font-style: italic;
+}
+
 footer div {
   float: right;
   line-height: 1.5; /* This assigns how much vertical space should 
