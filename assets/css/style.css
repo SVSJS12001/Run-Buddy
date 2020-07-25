@@ -1,9 +1,10 @@
 * {
-  margin: 0;
-  padding: 0;
-  /* To remove default browser-enforced styles, we apply 
+  margin: 0; 
+  padding: 0; /*To remove default browser-enforced styles, we apply 
   some default CSS values for every element in the page 
   to level the playing field all at once. */
+  box-sizing: border-box; /* This is a fix that will instruct
+   the browser to ignore padding in the overall width. */
 }
 
 body {
@@ -67,4 +68,29 @@ header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
   font-size: 22px;
+}
+
+footer {
+  background: #fce138;
+  width: 100%;
+  padding: 40px 35px;
+}
+
+footer h2 {
+  display: inline; /* same (display inline) property as in the heafer h1 */
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
+}
+
+footer div {
+  float: right;
+  line-height: 1.5; /* This assigns how much vertical space should 
+  be between lines of text content. */
+  text-align: right; /* This lets us align our text to the left, right,
+   center, or justified. By default, it is left-aligned. */
+}
+
+footer a {
+  color: #024e76;
 }
