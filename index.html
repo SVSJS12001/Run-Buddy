@@ -38,73 +38,72 @@
     <section class="hero">
         <div class="hero-form">
             <!--One important HTML rule is that both 
-            the opening and closing tags of an element must be 
-            completely contained inside the parent element. In 
-            this case the parent element is <section> and the 
-                child element is the <div>. -->
+the opening and closing tags of an element must be 
+completely contained inside the parent element. In 
+this case the parent element is <section> and the 
+child element is the <div>. -->
             <h3>Get Started Today</h3>
             <p>Fill out this form and the trainers will schedule a consultation</p>
             <form>
                 <!-- A sign-up form is a call to action, or CTA. Within this 
-                <form> will be child elements such as <input> and <label>. <input> 
-                elements come in many flavors, such as open-ended (a text field
-                that lets the user enter freeform text) and closed-ended 
-                (a radio button or checkbox for the user to select or check).
-                We'll start by adding the following HTML to the <form> element.
-                        
-                Look closely at how we pair the <input> and
-                corresponding <label> elements and their attributes: -->
+<form> will be child elements such as <input> and <label>. <input> 
+elements come in many flavors, such as open-ended (a text field
+ that lets the user enter freeform text) and closed-ended 
+(a radio button or checkbox for the user to select or check).
+We'll start by adding the following HTML to the <form> element.
+                                        
+Look closely at how we pair the <input> and
+corresponding <label> elements and their attributes: -->
                 <label for="name">Enter full name:</label>
                 <!-- {for} is an attribute in the <label> that programmatically links to 
-                the id attribute in the <input> element. The <label> text not only offers 
-                a visual directive of what to enter but also programmatically links to the
-                associated <input>. When a user with a visual impairment uses a screen reader, 
-                the label will be read out when they focus on the input field. Labels also make 
-                it easier to fill out forms on mobile devices; clicking on the label will target
-                the focus to the associated input field, which can be hard to do manually
-                on a small screen. -->
+the id attribute in the <input> element. The <label> text not only offers 
+a visual directive of what to enter but also programmatically links to the
+associated <input>. When a user with a visual impairment uses a screen reader, 
+ the label will be read out when they focus on the input field. Labels also make 
+ it easier to fill out forms on mobile devices; clicking on the label will target
+ the focus to the associated input field, which can be hard to do manually
+ on a small screen. -->
                 <input type="text" placeholder="Your Name" name="name" id="name" class="form-input">
                 <!-- {type} relates to what kind of input element we are using. Here we 
-                want a text field, which is also the default value.  
-                {Placeholder} offers a hint or label within the text field, but will not 
-                be submitted if this field if left blank. 
-                {name} identifies the element so the response can be referenced after the 
-                form is submitted. -->
+want a text field, which is also the default value.  
+{Placeholder} offers a hint or label within the text field, but will not 
+be submitted if this field if left blank. 
+{name} identifies the element so the response can be referenced after the 
+ form is submitted. -->
                 <label for="email">Enter email address:</label>
                 <input type="email" placeholder="Email Addesss" name="email" id="email" class="form-input">
                 <!--Desktop browsers treat the "tel" input type the same as the default "text" type. 
-                    They don't automatically validate the user's inputted value. However, 
-                    browsers on mobile devices will display a numeric keypad for the user 
-                    to input a value, rather than a standard keyboard. -->
+They don't automatically validate the user's inputted value. However, 
+browsers on mobile devices will display a numeric keypad for the user 
+to input a value, rather than a standard keyboard. -->
                 <label for="phone number">Enter a telphone number:</label>
                 <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input">
                 <!-- The simbol on the end of the <input> (/>), is known as a self-closing tag 
-                    and is a common sight in HTML. Some elements, like <input>, do not 
-                    contain any content or child elements, so the closing tag immediately 
-                    follows the opening tag. Thus this shortcut was created to self-close 
-                    the opening tag. -->
+and is a common sight in HTML. Some elements, like <input>, do not 
+contain any content or child elements, so the closing tag immediately 
+follows the opening tag. Thus this shortcut was created to self-close 
+the opening tag. -->
                 <p>
                     Have you worked out with a trainer before?
                     <input type="radio" name="trainer-confirm" id="triner-yes" />
                     <label for="triner-yes">Yes</label>
                     <!--This is used to reference which 
-                        radio button this label belongs to. The value for the {for} attribute 
-                        must match the value of the {id} attribute of the <input> element.-->
+radio button this label belongs to. The value for the {for} attribute 
+must match the value of the {id} attribute of the <input> element.-->
                     <input type="radio" name="trainer-confirm" id="triner-no" />
                     <label for="triner-no">No</label>
                 </p>
                 <!-- We've wrapped both of the answers, including both radio buttons, 
-                    in a <p> element that also includes the question. Because the radio 
-                    buttons are inline elements, the answer selections will render from 
-                    left to right on the same line as our question, just like it does in 
-                    the mock-up. Next, the <label> links the displayed values, Yes and No, 
-                    to their respective radio inputs. This link enhances accessibility by 
-                    allowing users to click on the label's text as well as the radio buttons, 
-                    which provides more clickable surface area. 
-                    The radio button elements must have the same name attribute in order to be 
-                    associated with the same radio group. This is how the browser identifies that 
-                    a group of choices can have an exclusive singular answer. In this case, 
-                    the value of our radio group in name is trainer-confirm. -->
+in a <p> element that also includes the question. Because the radio 
+buttons are inline elements, the answer selections will render from  left to right on the same line as our question, just like it does in 
+the mock-up. Next, the <label> links the displayed values, Yes and No, 
+to their respective radio inputs. This link enhances accessibility by 
+allowing users to click on the label's text as well as the radio buttons, 
+which provides more clickable surface area. 
+The radio button elements must have the same name attribute in order to be 
+associated with the same radio group. This is how the browser identifies that 
+a group of choices can have an exclusive singular answer. In this case, 
+the value of our radio group in name is trainer-confirm. -->
                 <p>
                     <label for="checkbox">
                         I aknowlege that I am atleast 18 years of age.
@@ -113,12 +112,12 @@
                 </p>
                 <button type="submit">
                     <!-- A button is an essential component of a user 
-                    interface and can have a variety of different functions and uses. 
-                    A button can link to another area on the webpage or an external site, 
-                    submit data to a server, or be programmed for any activity. n our case, 
-                    we need a submit type to perform the needed action. The content of this 
-                    element, "Get running", will be written inside the <button> element to 
-                    render a label on the button itself.-->
+interface and can have a variety of different functions and uses. 
+A button can link to another area on the webpage or an external site, 
+submit data to a server, or be programmed for any activity. n our case, 
+we need a submit type to perform the needed action. The content of this 
+element, "Get running", will be written inside the <button> element to 
+render a label on the button itself.-->
                     Get running!
                 </button>
             </form>
@@ -126,8 +125,15 @@
     </section>
 
     <!-- "what we do" section -->
-    <section id="what-we-do">
-        <h2>What We Do</h2>
+    <section id="what-we-do" class="intro">
+        <!-- The class intro is added so that it could be uniquely identified in 
+the style sheet. -->
+        <h2 class="section-title primary-border">What We Do</h2>
+        <!-- Note that these <h2> elements in different sections can use the same 
+section-title class, which gives them all the same baseline in terms of size,
+spacing, etc. We can then add additional classes by separating the class names 
+with a space. The attribute class="section-title primary-border" is actually 
+pulling in CSS declarations from two different classes. -->
         <p>
             <!-- Type the word 'lorem' and then press [enter] to generate random text. -->
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -139,40 +145,104 @@
 
 
     <!-- "what you do" section -->
-    <section id="what-you-do">
-        <h2>What You Do</h2>
+    <section id="what-you-do" class="steps">
+        <h2 class="section-title secondary-border">What You Do</h2>
 
         <div>
             <img src="./assets/images/step-1.svg" alt="" />
             <!-- The {alt} atribute: this is how we explain the content and context of images 
-           to search engines and assistive technology, like screen readers. -->
-            <h3>Step 1: Fill Out the Form Above</h3>
+to search engines and assistive technology, like screen readers. -->
+            <h3><span>Step 1: Fill Out the Form Above</span></h3>
+            <!--The <span> element doesn't affect anything visually. It is an inline element 
+meant for highlighting sections of larger text blocks, where the highlighting is something we 
+define ourselves with CSS. -->
             <p>You're already here, so why not?</p>
         </div>
 
         <div>
             <img src="./assets/images/step-2.svg" alt="" />
-            <h3>Step 2: Consult with one of our trainers</h3>
+            <h3><span>Step 2: Consult with one of our trainers</span></h3>
             <p>Are you here to build muscle, loose weight, or just meet chicks?</p>
         </div>
 
         <div>
             <img src="assets/images/step-3.svg" alt="" />
-            <h3>Step 3: Get Running!</h3>
+            <h3><span>Step 3: Get Running!</span></h3>
             <p>Hit the ground running (literally) once your trainer lays out your plan.</p>
         </div>
 
         <div>
             <img src="assets/images/step-4.svg" alt="" />
-            <h3>Step 4: See Results.</h3>
+            <h3><span>Step 4: See Results.</span></h3>
             <p>By-weekly checkins with your trainer will keep you focused</p>
         </div>
     </section>
 
 
     <!-- "meet the trainers" section -->
-    <section id="your-trainers">
-        <h2>Meet The Trainers</h2>
+    <section id="your-trainers" class="trainers">
+        <h2 class="section-title primary-border">
+            Meet The Trainers
+        </h2>
+
+        <!--First trainer -->
+        <article class="trainer">
+            <!-- The <article> was introduced to encapsulate content that 
+works on its own in a page, meaning that all the content inside the <article> element is related 
+to one another and nothing outside the element. In this example, we've wrapped all the content 
+related to a single trainer in this element, so when a screen reader reads the section, it will 
+infer that all of this content is related. -->
+            <img src="assets/images/Mariusz_Pudzianowski.jpg" alt="Mariusz looking tough" />
+            <div class="trainer-bio text-left">
+                <!-- Now the trainer's <article> element text is 
+left-aligned because we added another class, "text-left", to it. This class was created for the 
+sole purpose of left-aligning text when needed. -->
+                <h3>Mariusz Pudzianowski</h3>
+                <h4>Strengh</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam labore ducimus officiis eveniet odit quia similique voluptatum,
+                    quod harum et, possimus, beatae maxime debitis aut nemo! Quaerat autem
+                    consectetur explicabo.
+                </p>
+            </div>
+        </article>
+
+
+        <!-- second trainer bio -->
+        <article class="trainer">
+            <div class="trainer-bio text-right">
+                <h3>Ben Johnson</h3>
+                <h4>Speed</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus
+                    sint pariatur, distinctio quos est ipsum eveniet mollitia repellendus itaque
+                    a id non voluptate aperiam corporis molestias. Delectus, minus libero!
+                </p>
+            </div>
+            <img src="assets/images/Ben Johnson.jpg" alt="Ben Johnson in mid stride" />
+        </article>
+<!-- For our second trainer, we wanted to have the image on the right and text on the left. 
+To achieve this, we could have floated it to the right, but instead we simply switched the order 
+of their appearance in the HTML. This way, the text comes first naturally and the image appears 
+to the right because the HTML for it comes after it. -->
+
+
+        <!-- Third trainer bio -->
+        <article class="trainer">
+            <img src="assets/images/Camille Leblanc-Bazinet.jpg" class="camille" alt="Camille Leblanc-Bazinet 
+                facing the camera with her hand on her hips" />
+                <div class="trainer-bio text-left">
+                <h3>Camille Leblanc-Bazinet</h3>
+                <h4>Endurance</h4>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, optio!
+                    Maiores, consequatur animi laudantium quasi ex itaque illo nam ratione
+                    assumenda ullam voluptatibus odio distinctio fugit asperiores nostrum,
+                    id corrupti!
+                </p>
+            </div>
+        </article>
     </section>
 
 
