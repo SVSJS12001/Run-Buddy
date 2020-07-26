@@ -1,20 +1,23 @@
 * {
   margin: 0; 
-  padding: 0; /*To remove default browser-enforced styles, we apply 
-  some default CSS values for every element in the page 
-  to level the playing field all at once. */
+  padding: 0; /*To remove default browser-enforced styles, 
+  we apply some default CSS values for every element in the 
+  page to level the playing field all at once. */
   box-sizing: border-box; /* This is a fix that will instruct
    the browser to ignore padding in the overall width. */
 }
 
+
 body {
-  /* more on this crazy alphanumerical value in a minute! */
   color: #39a6b2;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-
-header {
+header { 
+  padding: 20px 35px;
+  background-color: #39a6b2;
+  font-weight: bold;
+}
   /* apply styles to <header>
 We just told the <header> element to apply 
 padding, which means to add space between 
@@ -22,11 +25,7 @@ where the <header> starts and where the content
 inside it starts. We also applied a background-color 
 of a light blue / teal.
 */
-  padding: 20px 35px;
-  background-color: #39a6b2;
-  font-weight: bold;
-}
-
+ 
 header h1 {
  font-weight: bold;
  font-size: 36px;
@@ -43,7 +42,10 @@ header a {
   color: #fce138;
 }
 
-header nav {
+header nav { 
+  float: right;
+  margin: 7px 0;
+}
   /* float: Think of this as similar to the 
   text-wrapping property in Microsoft Word, 
   which takes elements that want to take up 100% 
@@ -56,9 +58,7 @@ header nav {
   we have HTML elements that would look better side by 
   side, and we want to use our horizontal space in a more 
   meaningful way. */
-  float: right;
-  margin: 7px 0;
-}
+
 
 header nav ul li {
   display: inline;
@@ -69,6 +69,45 @@ header nav ul li a {
   font-weight: lighter;
   font-size: 22px;
 }
+
+/* Hero style begins. */
+
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  height: 600px; 
+  padding: 60px;
+  background-size: cover; /*background-size can set the 
+  size of the background image to its original size or 
+  make it stretched, repeated, or constrained to fit 
+  the available space. In our case, the cover assignment 
+  will shrink the image so that parts 
+  of it won't get clipped. */
+  background-position: center; /* Background-position can
+  move the initial position of the background image. 
+  We'll set this position to center. */
+  position: relative;
+}
+
+/* Hero style end */
+
+.hero-form {
+  border: 3px solid #024e76;
+  background-color: #fce138;
+  padding: 20px; /* padding: Creates an inner margin within 
+  the border. */
+  width: 500px; 
+  color: #024e76;
+  /* Similar to how padding values were assigned in the last lesson, 
+  the border property can be declared with a single value that represents 
+  one value for all four sides. The border property can also be 
+  designated for each side: border-top, border-bottom,border-left, 
+  border-right. Unlike padding, border can also have style and 
+  color values declared in addition to width. */
+  position: absolute;
+  bottom: 120px;
+  right: 140px;
+ }
+
 
 footer {
   background: #fce138;
@@ -90,12 +129,17 @@ footer h2 {
 
 footer div {
   float: right;
-  line-height: 1.5; /* This assigns how much vertical space should 
-  be between lines of text content. */
-  text-align: right; /* This lets us align our text to the left, right,
-   center, or justified. By default, it is left-aligned. */
+  line-height: 1.5; /* This assigns how much vertical space
+   should be between lines of text content. */
+  text-align: right; /* This lets us align our text to the 
+  left, right, center, or justified. By default, 
+  it is left-aligned. */
 }
 
 footer a {
   color: #024e76;
+}
+
+section {
+  padding: 60px;
 }
