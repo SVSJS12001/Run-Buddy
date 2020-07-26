@@ -145,8 +145,8 @@ which selection is for which answer. */
 .hero-form button {
   background-color:#024e76;
   color: #fce138;
-  padding: 10px 15px 10px 15px;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 /* HERO STYLES END */
