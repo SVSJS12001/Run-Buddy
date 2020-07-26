@@ -88,8 +88,6 @@ header nav ul li a {
   position: relative;
 }
 
-/* Hero style end */
-
 .hero-form {
   border: 3px solid #024e76;
   background-color: #fce138;
@@ -97,17 +95,61 @@ header nav ul li a {
   the border. */
   width: 500px; 
   color: #024e76;
-  /* Similar to how padding values were assigned in the last lesson, 
-  the border property can be declared with a single value that represents 
-  one value for all four sides. The border property can also be 
-  designated for each side: border-top, border-bottom,border-left, 
-  border-right. Unlike padding, border can also have style and 
-  color values declared in addition to width. */
+  /* Similar to how padding values were assigned in 
+  the last lesson, the border property can be declared
+  with a single value that represents one value for all
+  four sides. The border property can also be designated 
+  for each side: border-top, border-bottom, border-left, 
+  border-right. Unlike padding, border can also have style
+  and color values declared in addition to width. */
   position: absolute;
   bottom: 120px;
   right: 140px;
  }
 
+ .hero-form h3 {
+   font-size: 24px;
+   margin: 0;
+ }
+
+.hero-form p {
+margin: 5px 0 15px 0;
+}
+
+.form-input {
+  border: 1px solid #024e76; 
+  /* A skinny 1px border helped 
+  emphasize our sign-up requests. */
+  display: block;
+  /*This property instructs the browser
+   to render the element either as a 
+   <block> or inline. Some other <block> 
+   elements we've used are: <p>, >div>, and
+   all the >h1> to >h6>. 
+   Some inline elements we've used are:
+   <span>, <a>, and <label> */
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.hero-form label { /* Adding some horizontal spacing for 
+the <label> element in the radio button 
+elements helps the user not misinterpret 
+which selection is for which answer. */
+  margin: 0 5px;
+} 
+
+.hero-form button {
+  background-color:#024e76;
+  color: #fce138;
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* HERO STYLES END */
 
 footer {
   background: #fce138;
@@ -116,7 +158,8 @@ footer {
 }
 
 footer h2 {
-  display: inline; /* same (display inline) property as in the heafer h1 */
+  display: inline; /* same (display inline) property 
+  as in the heafer h1 */
   color: #024e76;
   font-size: 30px;
   margin: 0;
