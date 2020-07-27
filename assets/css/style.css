@@ -323,6 +323,45 @@ that says "Meet the Trainers" should now be centered. */
  }
  /* END MEET THE TRAINERS SECTION */
 
+
+ /* REACH OUT STYLES START */
+
+ .contact {
+   text-align: center;
+   background-color: #024e76;
+}
+
+ .contact h2 {
+   color: #fce138;
+}
+
+.contact-info iframe {
+  width: 400px;
+  height: 400px;
+}
+
+.contact-info div {
+  width: 410px;
+  display: inline-block; /* Note that in the CSS rule above
+  targeting the child <div>, we overwrote the default display
+  property for a <div> and changed it from block to
+  inline-block. This allows the .contact-info container to
+  sit on the same row as the <iframe> element and allows us
+  to assign a width, something that the property value inline
+  would not let us do. */
+  vertical-align: top; /* Because the content of this <div>
+  naturally rests at the bottom of the container, we need the
+  vertical-align property to lift this content up to the top.
+  In conjunction with the text-align property, this allows 
+  the contact information to begin at the top of the <div> 
+  and start aligned from the left for an easy-to-read layout.
+  */
+  text-align: left;
+  margin: 30px 0 0 60px;
+  color: rgb(212, 209, 209);
+}
+
+
  footer {
   background: #f5d504;
   width: 100%;
