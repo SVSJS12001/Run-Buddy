@@ -361,6 +361,28 @@ that says "Meet the Trainers" should now be centered. */
   color: rgb(212, 209, 209);
 }
 
+.contact-info h3 {
+  color: #fce138;
+  font-size: 32px;
+}
+
+.contact-info p, .contact-info address {
+/* Note that the second CSS rule targets two different 
+elements. The comma separates the two selectors, indicating
+that the subsequent declaration block will apply to both CSS
+selectors. */
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.contact-info a {
+  color: #38fcfc;
+}
+
+/* REACH OT STILES END */
+
 
  footer {
   background: #f5d504;
