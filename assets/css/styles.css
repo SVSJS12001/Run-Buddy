@@ -12,29 +12,38 @@ body {
   color: #39a6b2;
   font-family: Helvetica, Arial, sans-serif;
 }
-
+ /* apply styles to <header>*/
 header { 
-  padding: 20px 35px;
+  padding: 20px 35px; /*We just told the <header> element
+   to apply padding, which means to add space between where
+   the <header> starts and where the content inside it 
+  starts. */
   background-color: #39a6b2;
   font-weight: bold;
+  display: flex; /* The display: flex declaration makes
+   the <header> a row by default, so there's no need to 
+   explicitly declare it. And as you can see, flexbox evenly
+    distributed the space of the parent element (<header>)
+     among the children elements (the <h1> and <nav> links).
+     */ 
+  justify-content: space-between; /* The justify-content property 
+  only applies to elements with a display property value of flex
+  or grid (more on that later). space-between: Distributes all 
+  empty space evenly between child elements so they are evenly 
+  spaced apart. */
+  flex-wrap: wrap; /* flex-wrap, tells the container that when 
+  its child elements can't fit on one line, let them break onto
+  the next line. The flex-wrap property, allows the flexbox 
+  container to let its children wrap onto the next line. By
+   default, the value of flex-wrap is set to none, so we need
+    to explicitly tell it to be wrap */
 }
-  /* apply styles to <header>
-We just told the <header> element to apply 
-padding, which means to add space between 
-where the <header> starts and where the content 
-inside it starts. We also applied a background-color 
-of a light blue / teal.
-*/
  
 header h1 {
  font-weight: bold;
  font-size: 36px;
  color: #fce138;
  margin: 0;
- display: inline; /* So just by adding that one 
- property declaration (display: inline;) and setting 
- the <h1> to inline instead of block, we moved the <nav> 
- on the righthand side up. */
 }
 
 header a {
@@ -43,21 +52,9 @@ header a {
 }
 
 header nav { 
-  float: right;
   margin: 7px 0;
 }
-  /* float: Think of this as similar to the 
-  text-wrapping property in Microsoft Word, 
-  which takes elements that want to take up 100% 
-  of its parent's width by default (known in CSS 
-  as block elements) and pushes everything after 
-  it below it—even if it physically isn't 100% of 
-  its parents width—and allows other elements to 
-  come along side of it or wrap around it (known in 
-  CSS as inline elements). This property is used when 
-  we have HTML elements that would look better side by 
-  side, and we want to use our horizontal space in a more 
-  meaningful way. */
+
 
 
 header nav ul li {
