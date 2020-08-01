@@ -55,16 +55,35 @@ header nav {
   margin: 7px 0;
 }
 
-
-
-header nav ul li {
-  display: inline;
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* The property align-items works
+like justify-content but on the opposite axis. To "justify"
+information means to position it on the main axis, but to
+"align" it means to position it along the cross axis. In this
+case, we're vertically centering our content in the <nav> element.
+When using a flexbox as a row, the horizontal (x) axis is known
+as the main axis. This is the direction we can control when
+laying out the flexbox children. The vertical (y) axis is the
+cross axis. If we were to use the flex-direction property and set
+the value to be column instead of row (the default value), those
+axes would be switched and the values used for justify-content
+and align-items would be applied differently. This is because
+justify always follows along the main axis and align always
+follows along the cross axis. */
+list-style: none;
 }
 
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 1.55vw; /* By setting the value to 1.55vw, we're
+telling the browser that the font's size should be roughly 1.55
+percent of the window's overall width. This means that if the
+browser grows or shrinks, that size will change relative to the
+new overall width. */ 
 }
 
 /* Hero style begins. */
