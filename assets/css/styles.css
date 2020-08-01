@@ -182,9 +182,7 @@ which selection is for which answer. */
 }
 /* HERO STYLES END */
 
-.intro {
-  text-align: center;
-}
+
 
 .intro p {
   line-height: 1.6;
@@ -192,6 +190,7 @@ which selection is for which answer. */
   width: 80%;
   font-size: 20px;
   margin: 0 auto;
+  text-align: center;
 }
 /* Because we shrunk the width of the paragraph down to 80%,
 it no longer looks centered. Only the text inside is 
@@ -211,27 +210,14 @@ margin: auto 0 does not vertically center elements. */
 .section-title {
    font-size: 55px;
    color: #024e76;
-   margin-bottom: 35px;
-   padding: 0 100px 20px 100px;
+   padding-bottom: 20px;
+   text-align: center;
+   margin: 0 auto 35px auto;
+   width: 50%;
    border-color: #fce138;
    border-bottom: 3px solid;
-   display: inline-block; 
+ 
   }
-   /* Block elements take up 100% of the width of their 
-   parent, regardless of content size. Inline elements only 
-   take up as much space as their content needs, which means
-   multiple inline elements can sit next to each other.
-   The <h2> element, by default, is a block element, which 
-   means the styling associated with it is extending to 
-   fill up 100% of the width of the parent container. 
-   Using CSS, we can change that default behavior. We chose 
-   to use the inline-block value instead of the inline value 
-   so it can have the best of both worlds. It's now an inline 
-   element, but things like padding still behave like they
-   would on block elements. Coupled with our text-align 
-   property from before, we now have a center-aligned heading
-   with an appropriately sized border: */
-
 .primary-border {
      border-color: #fce138;
    }
@@ -242,7 +228,6 @@ margin: auto 0 does not vertically center elements. */
 
 
 .steps {
-  text-align: center;
   background: #f5d504;
 }
 
@@ -270,10 +255,7 @@ margin: auto 0 does not vertically center elements. */
 }
 
 .trainers {
-  text-align: center;
- /* By adding that to the entire <section> element 
-with a class attribute of "trainers", our <h2> element 
-that says "Meet the Trainers" should now be centered. */
+  
 }
 
 .trainer {
@@ -322,22 +304,7 @@ that says "Meet the Trainers" should now be centered. */
   width: 65%;
 }
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-/* CSS classes like the two above, that are not specific to 
- any part of an HTML document and that do only one thing are
- what's known as a utility classes. The idea behind them is
- instead of creating very specific classes that only fit the
- needs of a couple of HTML elements, you create more CSS 
- classes that apply one property declaration and are applied
- by adding multiple classes to an HTML element instead. */
-
- .trainer-bio h3 {
+.trainer-bio h3 {
    font-size: 32px;
    margin-bottom: 8px;
  }
@@ -358,7 +325,6 @@ that says "Meet the Trainers" should now be centered. */
  /* REACH OUT STYLES START */
 
  .contact {
-   text-align: center;
    background-color: #024e76;
 }
 
@@ -451,3 +417,23 @@ footer a {
 section {
   padding: 60px;
 }
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+/* CSS classes like the two above, that are not specific to 
+ any part of an HTML document and that do only one thing are
+ what's known as a utility classes. The idea behind them is
+ instead of creating very specific classes that only fit the
+ needs of a couple of HTML elements, you create more CSS 
+ classes that apply one property declaration and are applied
+ by adding multiple classes to an HTML element instead. */
+
+ .flex-row {
+   display: flex; /* The default flex-direction value for a 
+   flexbox is row, so we do not need to explicitly declare it. */
+ }

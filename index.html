@@ -143,25 +143,35 @@ render a label on the button itself.-->
     <section id="what-we-do" class="intro">
         <!-- The class intro is added so that it could be uniquely identified in 
 the style sheet. -->
-        <h2 class="section-title primary-border">What We Do</h2>
+        <div class="flex-row">
+            <h2 class="section-title primary-border">
+                What We Do
+            </h2>
+        </div>
         <!-- Note that these <h2> elements in different sections can use the same 
 section-title class, which gives them all the same baseline in terms of size,
 spacing, etc. We can then add additional classes by separating the class names 
 with a space. The attribute class="section-title primary-border" is actually 
 pulling in CSS declarations from two different classes. -->
-        <p>
-            <!-- Type the word 'lorem' and then press [enter] to generate random text. -->
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Non eveniet aut autem ratione magnam minima, minus,
-            assumenda ea exercitationem delectus inventore dolore rerum laborum nemo.
-            Sequi commodi nemo impedit iure.
-        </p>
+        <div class="flex-row">
+            <p>
+                <!-- Type the word 'lorem' and then press [enter] to generate random text. -->
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Non eveniet aut autem ratione magnam minima, minus,
+                assumenda ea exercitationem delectus inventore dolore rerum laborum nemo.
+                Sequi commodi nemo impedit iure.
+            </p>
+        </div>
     </section>
 
 
     <!-- "what you do" section -->
     <section id="what-you-do" class="steps">
-        <h2 class="section-title secondary-border">What You Do</h2>
+        <div class="flex-row">
+            <h2 class="section-title secondary-border">
+                What You Do
+            </h2>
+        </div>
 
         <div>
             <img src="./assets/images/step-1.svg" alt="" />
@@ -196,9 +206,11 @@ define ourselves with CSS. -->
 
     <!-- "meet the trainers" section -->
     <section id="your-trainers" class="trainers">
-        <h2 class="section-title primary-border">
-            Meet The Trainers
-        </h2>
+        <div class="flex-row">
+            <h2 class="section-title primary-border">
+                Meet The Trainers
+            </h2>
+        </div>
 
         <!--First trainer -->
         <article class="trainer">
