@@ -230,7 +230,7 @@ to search engines and assistive technology, like screen readers. -->
 
 
     <!-- "meet the trainers" section -->
-    <section id="your-trainers" class="trainers">
+    <section id="your-trainers">
         <div class="flex-row">
             <h2 class="section-title primary-border">
                 Meet The Trainers
@@ -238,62 +238,68 @@ to search engines and assistive technology, like screen readers. -->
         </div>
 
         <!--First trainer -->
-        <article class="trainer">
-            <!-- The <article> was introduced to encapsulate content that 
+        <div class="trainers">
+            <article class="trainer">
+                <!-- The <article> was introduced to encapsulate content that 
 works on its own in a page, meaning that all the content inside the <article> element is related 
 to one another and nothing outside the element. In this example, we've wrapped all the content 
 related to a single trainer in this element, so when a screen reader reads the section, it will 
 infer that all of this content is related. -->
-            <img src="assets/images/Mariusz_Pudzianowski.jpg" alt="Mariusz looking tough" />
-            <div class="trainer-bio text-left">
-                <!-- Now the trainer's <article> element text is 
-left-aligned because we added another class, "text-left", to it. This class was created for the 
-sole purpose of left-aligning text when needed. -->
-                <h3>Mariusz Pudzianowski</h3>
-                <h4>Strengh</h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magnam labore ducimus officiis eveniet odit quia similique voluptatum,
-                    quod harum et, possimus, beatae maxime debitis aut nemo! Quaerat autem
-                    consectetur explicabo.
-                </p>
-            </div>
-        </article>
+                <img src="assets/images/Mariusz_Pudzianowski.jpg" alt="Mariusz looking tough" />
+                <div class="trainer-bio">
+                    <h3 class="trainer-name">
+                        Mariusz Pudzianowski
+                    </h3>
+                    <h4 class="trainer-role">
+                        Strengh
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magnam labore ducimus officiis eveniet odit quia similique voluptatum,
+                        quod harum et, possimus, beatae maxime debitis aut nemo! Quaerat autem
+                        consectetur explicabo.
+                    </p>
+                </div>
+            </article>
 
-        <!-- second trainer bio -->
-        <article class="trainer">
-            <div class="trainer-bio text-right">
-                <h3>Ben Johnson</h3>
-                <h4>Speed</h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus
-                    sint pariatur, distinctio quos est ipsum eveniet mollitia repellendus itaque
-                    a id non voluptate aperiam corporis molestias. Delectus, minus libero!
-                </p>
-            </div>
-            <img src="assets/images/Ben Johnson.jpg" alt="Ben Johnson in mid stride" />
-        </article>
-        <!-- For our second trainer, we wanted to have the image on the right and text on the left. 
-To achieve this, we could have floated it to the right, but instead we simply switched the order 
-of their appearance in the HTML. This way, the text comes first naturally and the image appears 
-to the right because the HTML for it comes after it. -->
+            <!-- second trainer bio -->
+            <article class="trainer">
+                <img src="assets/images/Ben Johnson.jpg" alt="Ben Johnson in mid stride" />
+                <div class="trainer-bio">
+                    <h3 class="trainer-name">
+                        Ben Johnson
+                    </h3>
+                    <h4 class="trainer-role">
+                        Speed
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus
+                        sint pariatur, distinctio quos est ipsum eveniet mollitia repellendus itaque
+                        a id non voluptate aperiam corporis molestias. Delectus, minus libero!
+                    </p>
+                </div>
+            </article>
 
-
-        <!-- Third trainer bio -->
-        <article class="trainer">
-            <img src="assets/images/Camille Leblanc-Bazinet.jpg" alt="Camille Leblanc-Bazinet
+            <!-- Third trainer bio -->
+            <article class="trainer">
+                <img src="assets/images/Camille Leblanc-Bazinet.jpg" alt="Camille Leblanc-Bazinet
              posing for a picture" />
-            <div class="trainer-bio text-left">
-                <h3>Camille Leblanc-Bazinet</h3>
-                <h4>Endurance</h4>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, optio!
-                    Maiores, consequatur animi laudantium quasi ex itaque illo nam ratione
-                    assumenda ullam voluptatibus odio distinctio fugit asperiores nostrum,
-                    id corrupti!
-                </p>
-            </div>
-        </article>
+                <div class="trainer-bio">
+                    <h3 clas="trainer-name">
+                        Camille Leblanc-Bazinet
+                    </h3>
+                    <h4 class="trainer-role">
+                        Endurance
+                    </h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, optio!
+                        Maiores, consequatur animi laudantium quasi ex itaque illo nam ratione
+                        assumenda ullam voluptatibus odio distinctio fugit asperiores nostrum,
+                        id corrupti!
+                    </p>
+                </div>
+            </article>
+        </div>
     </section>
 
 
