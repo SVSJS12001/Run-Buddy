@@ -1,6 +1,7 @@
 * {
   margin: 0; 
-  padding: 0; /*To remove default browser-enforced styles, 
+  padding: 0; 
+  /*To remove default browser-enforced styles, 
   we apply some default CSS values for every element in the 
   page to level the playing field all at once. */
   box-sizing: border-box; /* This is a fix that will instruct
@@ -13,25 +14,29 @@ body {
 }
  /* apply styles to <header>*/
 header { 
-  padding: 20px 35px; /*We just told the <header> element
+  padding: 20px 35px; 
+  /*We just told the <header> element
    to apply padding, which means to add space between where
    the <header> starts and where the content inside it 
   starts. */
   background-color: #39a6b2;
   font-weight: bold;
-  display: flex; /* The display: flex declaration makes
+  display: flex; 
+  /* The display: flex declaration makes
    the <header> a row by default, so there's no need to 
    explicitly declare it. And as you can see, flexbox evenly
    distributed the space of the parent element (<header>)
    among the children elements (the <h1> and <nav> links). */ 
   
-  justify-content: space-between; /* The justify-content property 
+  justify-content: space-between; 
+  /* The justify-content property 
   only applies to elements with a display property value of flex
   or grid (more on that later). space-between: Distributes all 
   empty space evenly between child elements so they are evenly 
   spaced apart. */
   
-  flex-wrap: wrap; /* flex-wrap, tells the container that when 
+  flex-wrap: wrap; 
+  /* flex-wrap, tells the container that when 
   its child elements can't fit on one line, let them break onto
   the next line. The flex-wrap property, allows the flexbox 
   container to let its children wrap onto the next line. By
@@ -229,12 +234,12 @@ margin: auto 0 does not vertically center elements. */
 }
 
 .step {
+  flex-wrap: wrap;
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
   border-bottom: 1px solid #39a6b2;
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  
   align-items: center;
   justify-content: space-between;
 }
@@ -242,8 +247,24 @@ margin: auto 0 does not vertically center elements. */
 .step h3 {
   color: #024e76;
   font-size: 46px;
-  flex: 1 30%;
+  flex: 1 30%; 
+  /*.step h3 will be at least 30% 
+  wide and will receive any extra
+  space in the container. */
 }
+
+.step-info {
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+} /* .step-info will be at least 70% wide,
+ but will receive any extra space in the
+ container at a 2-to-1 ratio, meaning it
+ will receive 2 more units of unused
+ space than a sibling with a flex-grow
+ value of 1. 
+ */
 
 .step-img {
   flex: 1 12%;
@@ -253,25 +274,28 @@ margin: auto 0 does not vertically center elements. */
 .step-img img {
   max-width: 100%;
 }
+/* we need to do is tell the <img> element
+to limit its width to be whatever its container is.
+*/
+
+.step-text p {
+  font-size: 14px;
+}
 
 .step-text {
-  flex: 12; /*This means that .step-text will be
-  allotted 12 times more unused space than
-  .step-img, but .step-img at the very least
-  must be 12 percent of the width of .step-info. */
+  flex: 12; 
 }
+/* Now both child elements have a flex-grow
+property of 1 and 12, respectively. This means
+that  .step-text will be allotted 12 times more
+unused space than .step-img, but .step-img
+at the very least must be 12 percent of the
+width of .step-info. */
 
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
   color: #024e76;
-}
-
-.step-info {
-  flex: 2 70%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .step p {
@@ -290,9 +314,10 @@ margin: auto 0 does not vertically center elements. */
   margin: 15px;
   background: #024e76;
   color: #fce138;
-  flex: 1; /* If all flexbox children have a value of
-           flex: 1, that means they will share any extra
-           space evenly. */
+  flex: 1; 
+  /* If all flexbox children have a value of
+  flex: 1, that means they will share any extra
+  space evenly. */
 }
 
 .trainer img {
@@ -318,6 +343,11 @@ margin: auto 0 does not vertically center elements. */
  .trainer-bio p {
    font-size: 17px;   
 }
+
+.trainer-role {
+  color: rgb(51, 3, 3);
+  font-weight: bold;
+}
  /* END MEET THE TRAINERS SECTION */
 
 
@@ -337,7 +367,10 @@ margin: auto 0 does not vertically center elements. */
   flex-wrap: wrap;
 }
 
-.contact-info > * { /*Here, the * selector is saying
+.contact-info > * */ {
+  flex: 1;
+  margin: 15px;
+} /*Here, the * selector is saying
   "select all elements that are direct children of 
   anything with a class of contact-info." The > symbol
   means it's looking specifically for direct children of
@@ -346,9 +379,6 @@ margin: auto 0 does not vertically center elements. */
   In this case, it will apply the above styles to the three
   flexbox child elements in our contact-info flexbox container,
   so we are now all set with this section's flexbox layout. */
-  flex: 1;
-  margin: 15px;
-}
 
 .contact-info iframe {
   height: 400px;
@@ -379,7 +409,7 @@ selectors. */
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: #747602;
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
@@ -388,8 +418,8 @@ selectors. */
 .contact-form button {
   width: 100%;
   border: none;
-  background: #fce138;
-  color: #024e76;
+  background: #a80000;
+  color: #eeff00;
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
