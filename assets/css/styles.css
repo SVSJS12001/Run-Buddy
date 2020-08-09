@@ -82,7 +82,7 @@ list-style: none;
 }
 
 header nav ul li a {
-  margin: 0 30px;
+  padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw; /* By setting the value to 1.55vw, we're
 telling the browser that the font's size should be roughly 1.55
@@ -100,6 +100,7 @@ new overall width. */
   because want these two boxes as close to the middle of the 
   screen as possible. */
   background-image: url("../images/hero-bg.jpg");
+  align-items: flex-start;
   padding: 60px;
   background-size: cover; /*background-size can set the 
   size of the background image to its original size or 
@@ -115,7 +116,7 @@ new overall width. */
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .hero-cta h2 {
@@ -211,7 +212,7 @@ margin: auto 0 does not vertically center elements. */
 
 
 .section-title {
-   font-size: 55px;
+   font-size: 48px;
    color: #024e76;
    padding-bottom: 20px;
    text-align: center;
@@ -487,3 +488,7 @@ section {
    display: flex; /* The default flex-direction value for a 
    flexbox is row, so we do not need to explicitly declare it. */
  }
+
+ /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+}
