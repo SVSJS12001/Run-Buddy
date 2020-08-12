@@ -250,33 +250,30 @@ works on its own in a page, meaning that all the content inside the <article> el
 to one another and nothing outside the element. In this example, we've wrapped all the content 
 related to a single trainer in this element, so when a screen reader reads the section, it will 
 infer that all of this content is related. -->
-                <img src="assets/images/Mariusz_Pudzianowski.jpg" alt="Mariusz looking tough" />
-                <div class="trainer-bio">
-                    <h3 class="trainer-name">
-                        Mariusz Pudzianowski
-                    </h3>
-                    <h4 class="trainer-role">
-                        Strengh
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magnam labore ducimus officiis eveniet odit quia similique voluptatum,
-                        quod harum et, possimus, beatae maxime debitis aut nemo! Quaerat autem
-                        consectetur explicabo.
-                    </p>
-                </div>
+                <div class="trainer-img" class="trainer-1">
+                    <div>
+                        <h3>Mariusz Pudzianowski</h3>
+                        <h4> Strength </h4>
+                    </div>
+                    <div class="trainer-bio">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Magnam labore ducimus officiis eveniet odit quia similique voluptatum,
+                            quod harum et, possimus, beatae maxime debitis aut nemo! Quaerat autem
+                            consectetur explicabo.
+                        </p>
+                    </div>
             </article>
 
             <!-- second trainer bio -->
             <article class="trainer">
-                <img src="assets/images/Ben Johnson.jpg" alt="Ben Johnson in mid stride" />
+                <div class="trainer-img" class="trainer-2">
+                    <div>
+                        <h3>Ben Johnson</h3>
+                        <h4>Speed</h4>
+                    </div>
+                </div>
                 <div class="trainer-bio">
-                    <h3 class="trainer-name">
-                        Ben Johnson
-                    </h3>
-                    <h4 class="trainer-role">
-                        Speed
-                    </h4>
                     <p class="johnson">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod possimus
                         sint pariatur, distinctio quos est ipsum eveniet mollitia repellendus itaque
@@ -287,15 +284,13 @@ infer that all of this content is related. -->
 
             <!-- Third trainer bio -->
             <article class="trainer">
-                <img src="assets/images/Camille Leblanc-Bazinet.jpg" alt="Camille Leblanc-Bazinet
-             posing for a picture" />
+                <div class="trainer-img" class="trainer-3">
+                    <div>
+                        <h3>Camille Leblanc-Bazinet</h3>
+                        <h4>Endurance</h4>
+                    </div>
+                </div>
                 <div class="trainer-bio">
-                    <h3 clas="trainer-name">
-                        Camille Leblanc-Bazinet
-                    </h3>
-                    <h4 class="trainer-role">
-                        Endurance
-                    </h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, optio!
                         Maiores, consequatur animi laudantium quasi ex itaque illo nam ratione
@@ -304,7 +299,7 @@ infer that all of this content is related. -->
                     </p>
                 </div>
             </article>
-        </div>
+
     </section>
 
 

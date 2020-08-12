@@ -438,8 +438,13 @@ width of .step-info. */
   space evenly. */
 }
 
+.trainer-1 {
+  background-image: url('./assets/images/Mariusz_Pudzianowski.jpg');
+}
+
 .trainer img {
   width: 100%;
+  min-height: 300px;
 }
   
 
