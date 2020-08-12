@@ -12,8 +12,9 @@ body {
  color: #39a6b2;
  font-family: Helvetica, Arial, sans-serif;
 }
- /* apply styles to <header>*/
-header { 
+ 
+/* apply styles to <header>*/
+ header { 
   padding: 20px 35px; 
   /*We just told the <header> element
    to apply padding, which means to add space between where
@@ -27,14 +28,12 @@ header {
    explicitly declare it. And as you can see, flexbox evenly
    distributed the space of the parent element (<header>)
    among the children elements (the <h1> and <nav> links). */ 
-  
   justify-content: space-between; 
   /* The justify-content property 
   only applies to elements with a display property value of flex
   or grid (more on that later). space-between: Distributes all 
   empty space evenly between child elements so they are evenly 
   spaced apart. */
-  
   flex-wrap: wrap; 
   /* flex-wrap, tells the container that when 
   its child elements can't fit on one line, let them break onto
@@ -42,6 +41,16 @@ header {
   container to let its children wrap onto the next line. By
    default, the value of flex-wrap is set to none, so we need
     to explicitly tell it to be wrap */
+    position: sticky; /* this let the header follow the page as it scrolls*/
+    top: 0; /* The top property is important because this tells the browser
+    where to "stick" the element. We always want the header to be at the very
+    top of the viewport, so top: 0; makes the most sense. */
+    position: -webkit-sticky;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
 }
  
 header h1 {
@@ -49,6 +58,7 @@ header h1 {
  font-size: 36px;
  color: #fce138;
  margin: 0;
+ text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -89,6 +99,7 @@ telling the browser that the font's size should be roughly 1.55
 percent of the window's overall width. This means that if the
 browser grows or shrinks, that size will change relative to the
 new overall width. */ 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Hero style begins. */
@@ -108,6 +119,8 @@ new overall width. */
   the available space. In our case, the cover assignment 
   will shrink the image so that parts 
   of it won't get clipped. */
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 .hero-cta {
@@ -123,6 +136,7 @@ new overall width. */
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(1, 0, 0, 0.5);
 }
 
 .hero-form {
@@ -134,7 +148,7 @@ new overall width. */
   border-bottom, border-left, border-right. Unlike padding, 
   border can also have style and color values declared in 
   addition to width. */
-  background-color: #ffde08;
+  background-color: rgba(252, 225, 56, 0.8);
   padding: 20px; /* padding: Creates an inner margin within 
   the border. */
   color: #024e76;
@@ -142,6 +156,8 @@ new overall width. */
   margin: 3.5%; /* We used percentage values for the margins
    and widths this time around to show how it can work in the
    overall flow of this section.*/
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   border-radius: 15px;
 }
 
  .hero-form h3 {
@@ -170,21 +186,36 @@ margin: 5px 0 15px 0;
   color: #024e76;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
-.hero-form label { /* Adding some horizontal spacing for 
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);/* This makes
+ the form input's default state to be
+ slightly transparent, then switches to full opaqueness
+ when the input is in focus. */
+ outline: none;
+} 
+
+.hero-form label { 
+  margin: 0 5px; 
+} /* Adding some horizontal spacing for 
 the <label> element in the radio button 
 elements helps the user not misinterpret 
 which selection is for which answer. */
-  margin: 0 5px;
-} 
 
 .hero-form button {
-  background-color:#024e76;
+  background-color: #024e76;
   color: #fce138;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 10px;
+}
+
+.hero-form button:hover {
+  background-color: red;
 }
 /* HERO STYLES END */
 
@@ -239,11 +270,17 @@ margin: auto 0 does not vertically center elements. */
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;  
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #39a6b2;
 }
+
+.step:last-child {
+  border-bottom: none; 
+} /* This removes the border,
+  from the last child of .step */
+
 
 .step h3 {
   color: #024e76;
@@ -414,6 +451,16 @@ selectors. */
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
+} /* This makes the form input's default state to be slightly
+  transparent, then switches to full opaqueness when the input
+ is in focus: */
+
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1); /* This removes the
+ transparency effect once the user clicks.*/
+  outline: none;
 }
 
 .contact-form button {
@@ -424,6 +471,12 @@ selectors. */
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
 
 .contact-info a {
@@ -494,6 +547,7 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative; 
   }
 
 .hero-cta, .hero-form {
@@ -525,7 +579,7 @@ on their own line. For that, we used flex: 0 70%. */
   header h1 {
     width: 100%;
     text-align: center;
-  }
+}
 
   header nav ul {
     margin-top: 20px;
