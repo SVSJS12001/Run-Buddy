@@ -433,20 +433,61 @@ width of .step-info. */
   background: var(--secondary-color);
   color: var(--primary-color);
   flex: 1; 
-  /* If all flexbox children have a value of
+}  /* If all flexbox children have a value of
   flex: 1, that means they will share any extra
   space evenly. */
+
+  .trainer-1 {
+  background-image: url('../images/Mariusz_Pudzianowski.jpg');
 }
 
-.trainer-1 {
-  background-image: url('./assets/images/Mariusz_Pudzianowski.jpg');
+.trainer-2 {
+  background-image: url('../images/Ben\ Johnson.jpg');
 }
 
-.trainer img {
+.trainer-3 {
+  background-image: url('../images/Camille\ Leblanc-Bazinet.jpg');
+}
+
+.trainer-img {
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
   width: 100%;
   min-height: 300px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
 }
-  
+
+.trainer-img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 56, 0.3), var(--secondary-color));
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+  top: 0;
+}
+
+.trainer-img h3 {
+  position: relative;
+  z-index: 100;
+  font-size: 28px;
+  top: 0;
+}
+
+.trainer-img h4 {
+ position: relative;
+ z-index: 998;
+ font-size: 22px;
+ top: 0;
+ color: rgb(63, 5, 5);
+}
 
 .trainer-bio {
   padding: 25px;
